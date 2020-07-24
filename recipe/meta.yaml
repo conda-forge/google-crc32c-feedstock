@@ -9,7 +9,7 @@ source:
   url: https://github.com/googleapis/python-crc32c/archive/v{{ version }}.tar.gz
   sha256: 83144943a727beaffea6d133a1f9e425b46c95d8940ea429091c1c965d9c7ac7
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:

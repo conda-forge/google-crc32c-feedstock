@@ -1,5 +1,5 @@
 {% set name = "google-crc32c" %}
-{% set version = "0.1.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/googleapis/python-crc32c/archive/v{{ version }}.tar.gz
-  sha256: 83144943a727beaffea6d133a1f9e425b46c95d8940ea429091c1c965d9c7ac7
+  sha256: 9c6d3cda4f7e0b2d706a9bc04601080e54e0d15e923538bd4b9491c3489bbcf1
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-   - {{ compiler('c') }}
+    - {{ compiler('c') }}
   host:
     - python
     - pip
@@ -23,17 +23,14 @@ requirements:
   run:
     - python
     - cffi >=1.0.0
-  run_constrained:
-    # Make google-crc32c conflict with crc32c for dependency resolutions.
-    - crc32c <0a0
 
 test:
   requires:
     - python
     - pip
   imports:
-    - crc32c
-    - crc32c.cffi
+    - google_crc32c
+    - google_crc32c.cffi
   commands:
     - python -m pip check
 
@@ -43,7 +40,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Python wrapper for a hardware-based implementation of the CRC32C hashing algorithm'
+  summary: Python wrapper for a hardware-based implementation of the CRC32C hashing algorithm
 
   description: |
     google-crc32c wraps the libcrc32c

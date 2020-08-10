@@ -23,17 +23,14 @@ requirements:
   run:
     - python
     - cffi >=1.0.0
-  run_constrained:
-    # Make google-crc32c conflict with crc32c for dependency resolutions.
-    - crc32c <0a0
 
 test:
   requires:
     - python
     - pip
   imports:
-    - crc32c
-    - crc32c.cffi
+    - google_crc32c
+    - google_crc32c.cffi
   commands:
     - python -m pip check
 

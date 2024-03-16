@@ -1,5 +1,5 @@
 {% set name = "google-crc32c" %}
-{% set version = "1.1.2" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://github.com/googleapis/python-crc32c/archive/v{{ version }}.tar.gz
-  sha256: 24f4015fadc35ec4e2d138d89d00c28976ef8217c6cf8264b4c55ae0c89b1fe1
+  sha256: 029111b916bf130d9bcb13ad81d592e66623713f7791dd6d2bf366afd15dacf6
 build:
-  number: 5
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:

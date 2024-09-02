@@ -22,6 +22,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - libcrc32c
     - cffi >=1.0.0
   run:

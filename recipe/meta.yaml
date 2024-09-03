@@ -28,6 +28,8 @@ requirements:
   run:
     - python
     - cffi >=1.0.0
+    # needed for pkg_resources
+    - setuptools
 
 test:
   requires:

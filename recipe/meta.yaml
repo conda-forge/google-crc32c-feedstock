@@ -1,5 +1,5 @@
 {% set name = "google-crc32c" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google_crc32c-{{ version }}.tar.gz
-  sha256: 6eceb6ad197656a1ff49ebfbbfa870678c75be4344feb35ac1edf694309413dc
+  sha256: c8c15a04b290c7556f277acc55ad98503a8bc0893ea6860fd5b5d210f3f558ce
 
 build:
   number: 0

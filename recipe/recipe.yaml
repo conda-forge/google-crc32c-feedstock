@@ -28,6 +28,7 @@ requirements:
     - python
     - pip
     - setuptools
+    - wheel
     - libcrc32c
   run:
     - python

@@ -17,7 +17,6 @@ google-crc32c wraps the libcrc32c
 <https://github.com/google/crc32c> package, which is a hardware-based
 implementation of the CRC32C hashing algorithm.
 
-
 Current build status
 ====================
 
